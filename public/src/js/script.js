@@ -19,3 +19,7 @@
         }, false)
       })
   })()
+
+document.querySelector('#saveBack').addEventListener('click', () => {
+  document.querySelector('#updateCatatan').click();
+})
