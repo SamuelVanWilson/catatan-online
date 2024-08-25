@@ -11,7 +11,7 @@ Proyek ini adalah aplikasi catatan online yang dirancang dengan teknologi PHP da
 - OOP Principles: Menggunakan prinsip pemrograman berorientasi objek untuk modularitas dan skalabilitas.
 - CRUD Functionality: Aplikasi ini telah menerapkan operasi CRUD penuh untuk mengelola catatan.
 - Search Functionality:  Aplikasi ini telah menerapkan operasi Pencarian penuh untuk mencari catatan.
-- Securit : CSRF, Validation Form, Dan Middleware
+- Security : CSRF, Validation Form, Dan Middleware
 
 ### Fitur Utama Proyek Ini
 - Manajemen Catatan: Buat, simpan, baca, perbarui, mencari, dan hapus catatan dengan antarmuka yang user-friendly.
