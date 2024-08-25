@@ -54,6 +54,6 @@
             "install-path": "../twbs/bootstrap"
         }
     ],
-    "dev": true,
+    "dev": false,
     "dev-package-names": []
 }

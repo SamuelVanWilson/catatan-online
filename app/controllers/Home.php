@@ -18,12 +18,12 @@ class Home extends Controller{
 
     public function cariCatatan(){
         $data['navigasi'] = 'home';
+        $judulCatatan = (empty($_POST['judul'])) ? '' : $_POST['judul'] ;
         $dataUser = $this->model('Middleware_model')->getRmAuth($_COOKIE['rm_auth']);
-        $data['catatan'] =  $this->model('Home_model')->previewCatatan($dataUser['id']);
-        $data['catatanUser'] = $this->model('Catatan_model')->cari($_POST['judul']);
+        $data['catatanUser'] = $this->model('Catatan_model')->cari($judulCatatan, $dataUser['id']);
         $data['alert'] = 0;
 
-        if ($_POST['judul'] != '') {
+        if ($judulCatatan != '') {
             if ($data['catatanUser'] != false) {
                 Flasher::setFlasher('success', 'data berhasil ditemukan', 'kosongkan serach dan pencet tombol lagi untuk melihat semua catatan');
             }else{

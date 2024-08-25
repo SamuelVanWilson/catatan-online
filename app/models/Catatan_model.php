@@ -53,12 +53,14 @@ class Catatan_model{
         header('Location: '.BASE_URL.'home');
     }
 
-    public function cari($keyword){
-        $query = "SELECT * FROM catatan WHERE judul LIKE :judul";
+    public function cari($keyword, $id){
+        $query = "SELECT * FROM catatan WHERE judul LIKE :judul AND userId = :userId";
         $keyword = htmlspecialchars($keyword, ENT_QUOTES, 'UTF-8');
+        $userId = htmlspecialchars($id, ENT_QUOTES, 'UTF-8');
 
         $this->db->query($query);
         $this->db->bindValue(':judul', "%$keyword%");
+        $this->db->bindValue(':userId', $userId);
 
         return $this->db->resultMore();
     }
